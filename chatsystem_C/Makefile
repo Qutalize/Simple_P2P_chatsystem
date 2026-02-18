@@ -1,15 +1,10 @@
-CC      = gcc
-CFLAGS  = -g -Wall
-LDFLAGS = -lm -lrt
-TARGETS = raw_chat udp_chat
-
-all: $(TARGETS)
-
-raw_chat: raw_chat.c
-	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
-
-udp_chat: udp_chat.c
-	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
-
+start:
+	docker-compose up -d
+stop:
+	docker-compose down
+login-node1:
+	docker exec -it node1 bash
+login-node2:
+	docker exec -it node2 bash
 clean:
-	rm -f $(TARGETS)
+	docker-compose down --rmi all --volumes
