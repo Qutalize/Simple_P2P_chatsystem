@@ -67,8 +67,8 @@ epollやシステムコールがどのように呼ばれているかが見えに
 ## 5.実装の様子
 どの手法でも以下のようなチャットが可能になった。
 <p align="center">
-  <img src="images/10.100.0.10.png" width="500">
-  <img src="images/10.100.0.20.png" width="500">
+  <img src="images/10.100.0.10.png" width="400">
+  <img src="images/10.100.0.20.png" width="400">
 </p>
 
 ## 6.結論
