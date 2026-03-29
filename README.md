@@ -104,6 +104,10 @@ GoのWebUI版では以下のような機能などを実装した。
       <img src="images/4.png" width="300"><br>
       ④スタンプ一覧
     </td>
+    <td align="center">
+      <img src="images/5.png" width="300"><br>
+      ⑤会話後の様子
+    </td>
   </tr>
 </table>
 
