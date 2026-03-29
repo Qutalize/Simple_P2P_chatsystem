@@ -53,7 +53,10 @@ body {
     border-radius: 15px;
     font-size: 14px;
     line-height: 1.4;
-    word-wrap: break-word;
+    overflow-wrap: anywhere; 
+    word-break: break-all;
+    line-break: anywhere;
+    white-space: pre-wrap;
 }
 
 .message-wrapper.mine {
