@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #7494C0;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #7494C0;
+}
+
+.chat-header {
+    background-color: #00B900;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-header #targetId {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
+.input-area {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+}
+
+.message-area {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.message-bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    overflow-wrap: anywhere; 
+    word-break: break-all;
+    line-break: anywhere;
+    white-space: pre-wrap;
+}
+
+.message-wrapper.mine {
+    justify-content: flex-end; /*自分のメッセージは緑で右に寄せる*/
+}
+.message-wrapper.mine .message-bubble {
+    background-color: #8DE055;
+    color: #000;
+}
+
+.message-wrapper.other {
+    justify-content: flex-start; /* 相手のメッセージは白で左に寄せる */
+}
+.message-wrapper.other .message-bubble {
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+#sendBtn {
+    margin-left: 10px;
+    padding: 0 15px;
+    background-color: #00B900;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#stampToggleBtn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+    margin-right: 5px;
+    transition: transform 0.2s;
+}
+
+#stampToggleBtn:hover {
+    transform: scale(1.1);
+}
+
+.stamp-palette {
+    position: absolute;
+    bottom: 70px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 10px;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 100;
+}
+
+.stamp-palette.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+}
+
+.stamp-palette img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+}
+
+.stamp-palette img:hover {
+    background-color: #f0f0f0;
+}
+
+.stamp-bubble {
+    background: transparent !important; 
+    padding: 0; 
+}
+
+.stamp-bubble img {
+    max-width: 120px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    object-fit: contain; /*画像のアスペクト比を保って枠内に収める*/
+    border-radius: 10px;
+    display: block;/*画像の下にできる隙間を消す*/
+}
